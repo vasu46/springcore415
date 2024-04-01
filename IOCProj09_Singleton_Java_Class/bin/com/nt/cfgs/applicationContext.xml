@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+        
+        <!-- enable ing Component sacn -->
+        <context:component-scan base-package="com.nt.sbeans"></context:component-scan>
+        <!-- cread oBJECT OF PREDIFINED CALSS -->
+        <!-- singel ton scope with factory method -->
+       <!--  <bean id="p1" class="com.nt.sbeans.Painter" scope="singleton" factory-method="getInstance"></bean>
+         <bean id="p2" class="com.nt.sbeans.Painter" scope="singleton" factory-method="getInstance"></bean> -->
+          
+          <!-- singletonScope  -->
+        <!--   <bean id="p1" class="com.nt.sbeans.Painter" scope="singleton"></bean>
+         <bean id="p2" class="com.nt.sbeans.Painter" scope="singleton"></bean> -->
+         
+         <!--  prototype scope without factroy method
+              <bean id="p1" class="com.nt.sbeans.Painter" scope="prototype"/>
+              <bean id="p2" class="com.nt.sbeans.Painter" scope="prototype"/>  --> 
+         <!-- prototype scope with factory method -->
+           
+              <bean id="p1" class="com.nt.sbeans.Painter" scope="prototype" factory-method="getInstance"/>
+              <bean id="p2" class="com.nt.sbeans.Painter" scope="prototype" factory-method="getInstance"/>                         
+        </beans> 
+        
